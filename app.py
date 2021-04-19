@@ -44,7 +44,7 @@ def model2():
                 labels={'dailydeceased':'Daily deceased people due to covid','dateymd':'Dates'},height=600,width=1400)
     return(fig)
 
-app.layout = html.Div(children=[html.H4(children='Daily covid +ve realtime update'),html.Div(dcc.Graph(figure=model1())),html.Div(dcc.Graph(figure=model2())),html.Footer(children='Data Source: covid19india, Designed by Ashish')])
+app.layout = html.Div(children=[html.H4(children='Daily covid +ve realtime update'),html.Div(dcc.Graph(figure=model1())),html.Div(dcc.Graph(figure=model2())),html.Center(children=html.Footer(children='Data Source: covid19india, Designed by Ashish'))])
 
 if __name__ == '__main__':
     app.run_server(debug=True)
